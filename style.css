@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fffaf3;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #ff9800;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+}
+
+.slider {
+  display: flex;
+  width: 300%;
+  animation: slide 12s infinite;
+}
+
+.slide {
+  width: 100vw;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.caption {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  background: rgba(255, 152, 0, 0.8);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  33% { transform: translateX(-100%); }
+  66% { transform: translateX(-200%); }
+  100% { transform: translateX(0); }
+}
+
+.product-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.product-card {
+  background: #fff8e1;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 15px;
+  width: 250px;
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-card span {
+  display: block;
+  margin-top: 10px;
+  color: #d84315;
+  font-weight: bold;
+}
+
+.order-section {
+  background-color: #fff3e0;
+  padding: 30px;
+  text-align: center;
+}
+
+.order-section form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form input, form select, form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 10px;
+  background-color: #ff9800;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background-color: #e68900;
+}
+
+.contact-section {
+  padding: 30px;
+  background-color: #fff8e1;
+  text-align: center;
+}
+
+footer {
+  background-color: #ff9800;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+}
+
+#topBtn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: white;
+  color: #ff9800;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .product-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .slider {
+    flex-direction: column;
+  }
+}
